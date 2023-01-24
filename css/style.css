@@ -22,6 +22,11 @@ h2 {
     margin-bottom: 25px;
 }
 
+h3 {
+    font-size: 26px;
+    line-height: 30px;
+}
+
 .container {
     margin: 0 auto;
 }
@@ -35,7 +40,8 @@ h2 {
 }
 
 /*---SMALL ROUNDED BUTTON---*/
-header .header-top .header-login > button {
+header .header-top .header-login > button,
+footer .footer-bottom .footer-button > button {
     padding: 8px 11px;
     font-size: 11px;
     border-radius: 18px;
@@ -43,11 +49,25 @@ header .header-top .header-login > button {
 }
 
 /*---BIG ROUNDED BUTTON---*/
-header .header-bottom .content > button {
+header .header-bottom .content > button,
+main section .row .col-full .full-bottom > button {
     padding: 12px 15px;
     font-size: 16px;
     border-radius: 25px;
     border: none;
+}
+
+/*---DOWNLOAD BUTTON---*/
+header .header-bottom .content > button:first-of-type::before,
+main section .row .col-full .full-bottom > button::before {
+    content: '\2193';
+    font-weight: 700;
+    margin-right: 3px;
+}
+
+header .header-bottom .content > button:first-of-type::after,
+main section .row .col-full .full-bottom > button::after {
+    content: 'Scarica per Mac';
 }
 
 /*----------------------
@@ -113,7 +133,8 @@ header .header-top .header-bar > nav {
     width: 20%;
 } 
 
-.header-top .header-bar .header-logo > img {
+.header-top .header-bar .header-logo > img,
+footer .footer-bottom .footer-logo > img {
     height: 25px;
 }
 
@@ -163,11 +184,6 @@ HEADER BOTTOM
     margin: 40px 0 10px;
 }
 
-/*
-header .header-bottom .content .d-arrow::before {
-    content: '&darr;';
-}*/
-
 header .header-bottom .content > button:last-child {
     background-color: #23272a;
     color: white;
@@ -182,7 +198,7 @@ main section {
 }
 
 main section:nth-of-type(even) {
-    background-color: #D3D3D3;
+    background-color: #f6f6f6;
 }
 
 main section:nth-of-type(even) .row {
@@ -210,11 +226,17 @@ main section .row > .col-small {
     padding: 30px;
 }
 
+
+main section .row:last-child {
+    margin-bottom: 50px;
+}
+
+
 main section .row .col-full {
     text-align: center;
 }
 
-main section .row .col-full > p {
+main section .row .col-full p {
     padding: 0 200px;
 }
 
@@ -222,56 +244,72 @@ main section .row .col-full > img {
     width: 80%;
 }
 
+main section .row .col-full .full-bottom > h3 {
+    margin: 60px 0 40px;
+}
+
+main section .row .col-full .full-bottom > button {
+    background-color: #7289da;
+    color: white;
+}
+
 /*----------------------
 FOOTER
 ----------------------*/
 footer {
     background-color: #23272A;
+    color: white;
+    border-bottom: 1px solid #f6f6f6;
 }
 
 /*----------------------
 FOOTER TOP
 ----------------------*/
+footer .footer-top h3,
+footer .footer-top h5 {
+    color: #7289da;
+} 
 
 footer .footer-top {
     display: flex;
-    padding: 10px 0;
+    padding: 60px 0 30px;
 }
 
 footer .footer-top > .main-column {
     flex-basis: 30%;
-    background-color: #F08080;
+    padding-right: 100px;
 }
 
 footer .footer-top > .menu-column {
     flex-basis: 70%;
-    background-color: #20B2AA;
     display: flex;
     justify-content: space-between;
 }
 
 footer .footer-top .menu-column > .col {
     flex-basis: 25%;
-    border: 2px dashed white;
 }
 
-hr {
-    margin: 30px 0;
+footer .footer-top .main-column > select {
+    background-color: #23272A;
+    border: none;
+    color: white;
+    font-size: 12px;
 }
 
 /*----------------------
 FOOTER BOTTOM
 ----------------------*/
 footer .footer-bottom {
-    background-color: #7FFFD4;
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+    border-top: 1px solid #7289da;
 }
 
-footer .footer-bottom > div {
-    background-color: #FFB6C1;
-    padding: 3px 5px;
+footer .footer-bottom .footer-button > button {
+    background-color: #7289da;
+    color: white;
 }
 
 .footer-closing {
