@@ -15,6 +15,13 @@ body {
     line-height: 25px;
 }
 
+h2 {
+    line-height: 45px;
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
 .container {
     margin: 0 auto;
 }
@@ -174,32 +181,45 @@ main section {
     padding: 50px;
 }
 
-main section:nth-child(even) {
+main section:nth-of-type(even) {
     background-color: #D3D3D3;
 }
 
-main section:nth-child(even) .row {
+main section:nth-of-type(even) .row {
     flex-direction: row-reverse;
 }
 
 main section .row {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 main section .row > .col-big {
-    width: 60%;
-    background-color: #1E90FF;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+main section .row .col-big > img {
+    width: 100%;
 }
 
 main section .row > .col-small {
-    width: 40%;
-    background-color: #FFC0CB;
+    width: 30%;
+    padding: 30px;
 }
 
-main section .row > .col-full {
-    width: 100%;
-    background-color: #228B22;
+main section .row .col-full {
+    text-align: center;
+}
+
+main section .row .col-full > p {
+    padding: 0 200px;
+}
+
+main section .row .col-full > img {
+    width: 80%;
 }
 
 /*----------------------
